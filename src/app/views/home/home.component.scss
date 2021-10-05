@@ -1,0 +1,21 @@
+app-wave-bg {
+  position: fixed;
+  top: calc(100vh - 100vmax);
+  left: calc(50%-50vw);
+  z-index: -1;
+  width: 200vmax;
+  transform-origin: center bottom;
+  transform: rotate(-30deg);
+  filter: blur(64px);
+  animation: rock 30s linear 0s infinite alternate;
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}

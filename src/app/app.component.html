@@ -1,0 +1,61 @@
+<div
+  class="d-md-flex align-items-center my-nav justify-content-center"
+  [ngClass]="{
+    'd-flex fh flex-column': route === '/',
+    'd-none': route !== '/'
+  }"
+>
+  <div class="container mb-5 text-center" *ngIf="route === '/'">
+    <img src="assets/logo.svg" alt="JONO" class="logo-img" />
+    <p class="h1 my-5">Coder, Designer, Technology Enthusiast</p>
+  </div>
+  <div class="my-2 text-center" [ngClass]="{ 'btn-group': route !== '/' }">
+    <button
+      class="btn btn-lg btn-outline-dark px-5 h1"
+      [ngClass]="{ 'mx-3': route === '/' }"
+      routerLink="/about"
+      routerLinkActive="bg-dark text-light"
+    >
+      <h1 class="m-0" [ngClass]="{ h4: route !== '/' }">About Me</h1>
+    </button>
+    <button
+      class="btn btn-lg btn-outline-dark px-5 h1"
+      [ngClass]="{ 'mx-3': route === '/' }"
+      routerLink="/projects"
+      routerLinkActive="bg-dark text-light"
+    >
+      <h1 class="m-0" [ngClass]="{ h4: route !== '/' }">Projects</h1>
+    </button>
+    <button
+      class="btn btn-lg btn-outline-dark px-5 h1"
+      [ngClass]="{ 'mx-3': route === '/' }"
+      routerLink="/writing"
+      routerLinkActive="bg-dark text-light"
+    >
+      <h1 class="m-0" [ngClass]="{ h4: route !== '/' }">Writing</h1>
+    </button>
+  </div>
+</div>
+
+<button
+  class="btn btn-link btn-lg my-2 h1 text-decoration-none home-btn"
+  *ngIf="route !== '/'"
+  routerLink="/"
+>
+  <i class="h2 bi bi-house-fill"></i>
+</button>
+<div class="top-right">
+  <a
+    class="btn btn-link btn-lg m-2 h1 text-decoration-none text-dark"
+    href="https://github.com/jonosellier"
+  >
+    <i class="h2 bi bi-github"></i>
+  </a>
+  <a
+    class="btn btn-link btn-lg m-2 h1 text-decoration-none text-dark"
+    href="https://linkedin.com/in/jonosellier"
+  >
+    <i class="h2 bi bi-linkedin"></i>
+  </a>
+</div>
+<router-outlet></router-outlet>

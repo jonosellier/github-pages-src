@@ -1,0 +1,30 @@
+.my-nav {
+  transition: 0.25s ease-in-out;
+  min-height: 1vh;
+  &.fh {
+    min-height: 100vh;
+  }
+}
+
+.home-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-outline-primary {
+  background-color: var(--bs-light);
+  &:hover {
+    background-color: var(--bs-primary);
+  }
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.logo-img {
+  filter: drop-shadow(0 0 16px var(--bs-primary));
+}

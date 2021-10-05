@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="my-5">
+    <h1 class="mb-5">I'll never be nominated for a Pulitzer</h1>
+    <p>
+      That being said, I owe my entire career to people who took the time to
+      figure out something interesting and write about it. This is my way of
+      giving back. Some might be listacles, some might be tutorials. Whatever I
+      found that I wanted to share will end up here.
+      <sup>The rhyme is unintentional</sup>
+    </p>
+  </div>
+  <h2 class="mb-3">My Writing</h2>
+  <ul class="px-0">
+    <li
+      class="border-bottom border-3 border-secondary"
+      *ngFor="let article of articles"
+    >
+      <button
+        [routerLink]="'/writing/' + article.slug"
+        class="
+          btn
+          py-3
+          text-primary
+          w-100
+          d-flex
+          justify-content-between
+          flex-wrap
+        "
+      >
+        <div class="text-start">{{ article.title }}</div>
+        <div class="text-muted text-end mt-3 mt-md-0">{{ article.posted }}</div>
+      </button>
+    </li>
+  </ul>
+</div>

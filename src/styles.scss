@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+$font-family-sans-serif: "Fira Mono", monospace;
+$primary: #e56d3c;
+$secondary: #636363;
+$danger: #840032;
+$info: #257077;
+$warning: #fc7753;
+$success: #4a7c59;
+$light: #212225;
+$dark: #ebebeb;
+
+$body-bg: $light;
+$body-color: $dark;
+
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+
+.shadow-lg-hover {
+  transition: box-shadow 0.25s ease-in-out;
+  &:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  }
+}
+
+.text-serif {
+  font-family: "Noto Serif", serif;
+}
+
+article {
+  font-size: 1.25em;
+  max-width: 80ch;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 8px;
+  a {
+    filter: brightness(175%);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    & + em {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  code {
+    background-color: #ffffffa0;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0px 3px;
+    color: #242424;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5em;
+  }
+
+  blockquote {
+    background-color: #ffffff20;
+    border-left: 6px solid $info;
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin: 2em 0;
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+:host {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding-top: 1px;
+  z-index: 2;
+  margin-bottom: 200px;
+  div.timeline-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: -96px;
+    & > .connector {
+      width: 32px;
+      margin: 0;
+      padding: 0;
+      height: 4px;
+      background-color: var(--bs-secondary);
+      color: var(--bs-secondary);
+      display: block;
+    }
+    &:hover > .connector {
+      background-color: var(--bs-primary);
+      color: var(--bs-primary);
+    }
+    & > app-timeline-item {
+      display: block;
+      width: calc(50% - 32px);
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      & > .connector::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        border: 2px solid var(--bs-light);
+        box-shadow: 0px 0px 0px 2px currentColor;
+        display: inline-block;
+        margin-right: -12px;
+        background-color: inherit;
+        transform: translateY(-10px) translateX(-6px);
+      }
+    }
+
+    &:nth-child(odd) > .connector::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      border: 2px solid var(--bs-light);
+      box-shadow: 0px 0px 0px 2px currentColor;
+      display: inline-block;
+      margin-right: -12px;
+      background-color: inherit;
+      transform: translateY(-10px) translateX(26px);
+    }
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+  div.line {
+    position: absolute;
+    height: calc(100% + 64px);
+    width: 4px;
+    border-radius: 2px;
+    left: calc(50% - 2px);
+    top: 0;
+  }
+}
+
+app-warp {
+  width: 200px;
+  height: 150px;
+  margin: -67px auto 0px;
+  z-index: 200;
+  position: absolute;
+  bottom: -140px;
+  left: calc(50% - 100px);
+}
+
+@media screen and (max-width: 974px) {
+  .timeline-container {
+    div.line {
+      left: -2px;
+    }
+    & > div.timeline-row {
+      margin-bottom: 32px;
+      & > app-timeline-item {
+        width: calc(100% - 32px);
+      }
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+        & > .connector::after {
+          display: none;
+        }
+        & > .connector::before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          border-radius: 12px;
+          border: 2px solid var(--bs-light);
+          box-shadow: 0px 0px 0px 2px currentColor;
+          display: inline-block;
+          margin-right: -12px;
+          background-color: inherit;
+          transform: translateY(-10px) translateX(-6px);
+        }
+      }
+    }
+  }
+  app-warp {
+    left: -100px;
+  }
+}

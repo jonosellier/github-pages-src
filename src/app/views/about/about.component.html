@@ -1,0 +1,76 @@
+<div class="container">
+  <section class="py-5">
+    <h1 class="display-2 text-bolder text-primary pt-5 mb-5">
+      A little bit about me
+    </h1>
+    <div class="row">
+      <div class="col">
+        <img
+          src="https://picsum.photos/500"
+          class="border border-3 border-primary rounded-3 shadow"
+          alt=""
+        />
+      </div>
+      <div class="col">
+        <p>
+          My name is Jonathan Sellier. I am currently a Web Developer at Boson
+          Software where I deliver high-quality web applications to meet the
+          needs of the company. I graduated from The University of South Florida
+          in Tampa, Florida with a degree in Computer Science in May 2020. I
+          have always been interested in coding and general computing, even
+          using a computer from as young as 2 years old.
+        </p>
+
+        <p>
+          I am using this site as both an online portfolio/resume and also as a
+          central hub for my other creative works like written tutorials and
+          summaries of some of the finer topics in computer science.
+        </p>
+
+        <p>
+          I consider myself highly motivated and truly love creating projects
+          and learning new languages, frameworks, and development strategies. My
+          current love is using JavaScript for cross-platform development
+          through Progressive Web Apps. I truly hope that this means of
+          development takes hold and allows for experiences to be brought to
+          users regardless of their platform.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <h1 class="display-2 text-bolder text-primary pt-5 my-5">My education</h1>
+    <app-timeline [data]="resume.education"></app-timeline>
+  </section>
+
+  <section class="py-5">
+    <h1 class="display-2 text-bolder text-primary pt-5 my-5">
+      My professional experience
+    </h1>
+    <app-timeline [data]="resume.professionalExperience"></app-timeline>
+  </section>
+
+  <section class="py-5">
+    <h1 class="display-2 text-bolder text-primary pt-5 mt-5 my-5">
+      My skill set
+    </h1>
+    <ul class="px-0 h2 d-flex flex-wrap justify-content-around">
+      <li
+        class="
+          d-inline-block
+          border border-2 border-success
+          rounded-pill
+          text-success
+          px-5
+          py-2
+          my-3
+          mx-2
+          text-center
+        "
+        *ngFor="let skill of resume.skills"
+      >
+        {{ skill }}
+      </li>
+    </ul>
+  </section>
+</div>
