@@ -1,0 +1,6 @@
+.project-item {
+  max-width: 900px;
+  &:nth-child(even) {
+    margin-left: auto;
+  }
+}

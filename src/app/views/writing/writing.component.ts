@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class WritingComponent implements OnInit {
   articles = [
     {
+      title: 'Things you might not know about Windows Terminal',
+      slug: 'win-term',
+      posted: 'December 20, 2021',
+    },
+    {
       title: '4 Must-Have Tools for Developing on Windows',
       slug: 'must-have-productivity-tools',
       posted: 'September 22, 2020',

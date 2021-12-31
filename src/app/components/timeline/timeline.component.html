@@ -1,18 +1,13 @@
 <div class="timeline-container mx-auto overflow-clip" #timelineContainer>
   <div class="line bg-secondary"></div>
-
-  <app-warp></app-warp>
   <div class="timeline-row" *ngFor="let data of experienceData">
     <app-timeline-item>
-      <h2 class="text-secondary">
+      <h2 class="text-secondary mb-5">
         <strong class="text-dark">{{ data.title }}</strong> @
         {{ data.employer }}
       </h2>
-      <p>
-        {{ data.description }}
-      </p>
-      <hr />
-      <h3>
+      <p *ngFor="let paragraph of data.description" [innerHTML]="paragraph"></p>
+      <h3 class="mt-5">
         {{ data.date.from | date: "MMMM y" }} -
         {{
           data.date.to === "present"
@@ -29,10 +24,7 @@
         <strong>{{ data.diploma }}</strong>
       </h2>
       <h3 class="text-secondary">{{ data.school }}</h3>
-      <h4 *ngIf="data.notableClasses">
-        <hr />
-        Notable classes:
-      </h4>
+      <h4 *ngIf="data.notableClasses" class="mt-5">Notable classes:</h4>
       <ul class="px-0">
         <li
           *ngFor="let class of data.notableClasses"
@@ -50,8 +42,7 @@
           {{ class }}
         </li>
       </ul>
-      <hr />
-      <h3>
+      <h3 class="mt-5">
         {{ data.date.from | date: "MMMM y" }} -
         {{
           data.date.to === "present"

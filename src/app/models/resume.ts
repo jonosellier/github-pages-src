@@ -18,7 +18,7 @@ export interface IExperience {
   employer: string;
   title: string;
   date: { from: string; to: string };
-  description: string;
+  description: string[] | string;
 }
 
 export class ResumeData {
@@ -61,12 +61,14 @@ export class Experience {
   title: string;
   employer: string;
   date: { from: Date; to: Date | 'present' };
-  description: string;
+  description: string[];
 
   constructor(data: IExperience) {
     this.title = data.title;
     this.employer = data.employer;
-    this.description = data.description;
+    this.description = Array.isArray(data.description)
+      ? data.description
+      : [data.description];
     this.date = {
       to: data.date.to === 'present' ? 'present' : new Date(data.date.to),
       from: new Date(data.date.from),

@@ -1,8 +1,12 @@
 .my-nav {
   transition: 0.25s ease-in-out;
   min-height: 1vh;
+  max-height: 300vh;
   &.fh {
     min-height: 100vh;
+  }
+  &.hidden {
+    max-height: 10vh;
   }
 }
 
@@ -26,5 +30,37 @@
 }
 
 .logo-img {
-  filter: drop-shadow(0 0 16px var(--bs-primary));
+  filter: drop-shadow(0 0 1px var(--bs-dark));
+  max-width: 80vw;
+}
+
+app-wave-bg {
+  display: block;
+  position: fixed;
+  top: calc(100vh - 100vmax);
+  left: calc(50%-50vw);
+  z-index: -1;
+  width: 200vmax;
+  transform-origin: center bottom;
+  transform: rotate(-30deg);
+  filter: blur(64px);
+  transition: 0.25s ease-in-out;
+  animation: rock s linear 0s infinite alternate;
+  &:not(.hidden) {
+    opacity: 1;
+  }
+  &.hidden {
+    animation-play-state: paused;
+    opacity: 0;
+  }
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
 }

@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-$font-family-sans-serif: "Fira Mono", monospace;
-$primary: #e56d3c;
-$secondary: #636363;
+// $font-family-sans-serif: "Fira Mono", monospace;
+$primary: #1874ca;
+$secondary: #9c9c9c;
 $danger: #840032;
 $info: #257077;
 $warning: #fc7753;
@@ -26,6 +26,21 @@ $body-color: $dark;
 
 .text-serif {
   font-family: "Noto Serif", serif;
+}
+
+.display-2 {
+  font-weight: 500;
+}
+
+code {
+  color: $body-color;
+  background-color: #80808020;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.w-33 {
+  width: 33%;
 }
 
 article {
@@ -79,5 +94,11 @@ article {
     p {
       margin: 0;
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .nav-tab {
+    width: 100%;
   }
 }

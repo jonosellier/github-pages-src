@@ -59,8 +59,12 @@ export class AboutComponent implements OnInit {
         title: 'Web Developer',
         employer: 'Boson Software',
         date: { from: 'May 2020', to: 'present' },
-        description:
-          'My primary role at Boson Software is the development and support of a web-based version of ExSim-Max, a testing suite designed primarily for IT certification practice exams. I also provide support for our Windows-only version (branded as Boson Exam Environment) by creating custom-made "simulation questions" which are VB or C# programs to simulate more complicated questions. Items include virtual terminals, drag and drop questions, and both desktop and mobile device configuration. My primary focus is front-end work but I have utilized a variety of technologies at my current role beyond front-end development.',
+        description: [
+          'My primary role at Boson Software is the development and support of a web-based version of <a href="https://exams.boson.com">ExSim-Max</a>, a testing suite designed primarily for IT certification practice exams.',
+          'A notable achievement beyond the scope of my duties was how I have optimized the creation of custom-made simulation questions by creating both data structures to represent common types of simulation questions as well as a GUI for rapid creation. The resulting gains in productivity turn week-long tasks into day-long tasks as well as allowed colleagues in non-technical roles to make minor changes without the assistance of developers. I have also successfully pushed for product documentation to me moved from a PDF to a searchable, responsive documentation site.',
+          'I also provide support for our Windows-only version (branded as Boson Exam Environment) by creating duplicating work done for the web version with custom-made "simulation questions" which are VB or C# programs to simulate more complicated questions. Items include virtual terminals, drag and drop questions, and both desktop and mobile device configuration.',
+          'My primary focus is front-end work but I have utilized a variety of technologies at my current role beyond front-end development such as such as NestJS, MSSQL Server, and Capacitor.',
+        ],
       },
     ],
     skills: [

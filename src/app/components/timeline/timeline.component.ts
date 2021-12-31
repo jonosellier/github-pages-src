@@ -45,7 +45,6 @@ export class TimelineComponent implements OnInit, AfterViewChecked {
 
   @HostListener('window:resize')
   handleResize() {
-    console.log(this.timelineContainer);
     const firstTimelineItem = Array.from(
       this.timelineContainer.nativeElement.children
     )[1] as HTMLElement;
