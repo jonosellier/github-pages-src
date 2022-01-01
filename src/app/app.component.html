@@ -70,6 +70,15 @@
     <i class="h2 bi bi-linkedin"></i>
   </a>
 </div>
+
+<div *ngIf="route === '/'" class="bottom-right">
+  <a
+    href="https://github.com/jonosellier/github-pages-src"
+    class="btn btn-sm btn-light m-2"
+  >
+    View Source <i class="bi bi-file-earmark-code"></i>
+  </a>
+</div>
 <app-wave-bg
   [ngClass]="{
     hidden: route !== '/'

@@ -29,6 +29,12 @@
   right: 0;
 }
 
+div.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .logo-img {
   filter: drop-shadow(0 0 1px var(--bs-dark));
   max-width: 80vw;
