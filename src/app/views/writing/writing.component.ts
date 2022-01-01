@@ -13,6 +13,11 @@ export class WritingComponent implements OnInit {
       posted: 'December 20, 2021',
     },
     {
+      title: 'Easy Overlay Scrollbars with Reactive Design',
+      slug: 'overlay-scrollbars',
+      posted: 'October 29, 2021',
+    },
+    {
       title: '4 Must-Have Tools for Developing on Windows',
       slug: 'must-have-productivity-tools',
       posted: 'September 22, 2020',
