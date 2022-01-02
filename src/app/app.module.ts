@@ -13,6 +13,7 @@ import { TimelineItemComponent } from './components/timeline-item/timeline-item.
 import { WarpComponent } from './components/warp/warp.component';
 import { ArticleComponent } from './views/article/article.component';
 import { WaveBgComponent } from './components/wave-bg/wave-bg.component';
+import { TimelineFadeInDirective } from './directives/timeline-fade-in.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { WaveBgComponent } from './components/wave-bg/wave-bg.component';
     WarpComponent,
     ArticleComponent,
     WaveBgComponent,
+    TimelineFadeInDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

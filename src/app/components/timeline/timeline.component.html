@@ -1,6 +1,10 @@
 <div class="timeline-container mx-auto overflow-clip" #timelineContainer>
   <div class="line bg-secondary"></div>
-  <div class="timeline-row" *ngFor="let data of experienceData">
+  <div
+    class="timeline-row"
+    *ngFor="let data of experienceData"
+    appTimelineFadeIn
+  >
     <app-timeline-item>
       <h2 class="text-secondary mb-5">
         <strong class="text-dark">{{ data.title }}</strong> @
@@ -18,7 +22,11 @@
     </app-timeline-item>
     <div class="connector"></div>
   </div>
-  <div class="timeline-row" *ngFor="let data of educationData">
+  <div
+    class="timeline-row"
+    *ngFor="let data of educationData"
+    appTimelineFadeIn
+  >
     <app-timeline-item>
       <h2>
         <strong>{{ data.diploma }}</strong>
