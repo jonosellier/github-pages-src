@@ -35,9 +35,17 @@ div.bottom-right {
   right: 0;
 }
 
+.h-0 {
+  height: 0 !important;
+}
+
 .logo-img {
   filter: drop-shadow(0 0 1px var(--bs-dark));
   max-width: 80vw;
+}
+
+div.container {
+  transition: 0.5s ease-in-out;
 }
 
 app-wave-bg {

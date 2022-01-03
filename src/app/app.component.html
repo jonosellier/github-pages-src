@@ -12,7 +12,10 @@
     hidden: route !== '/'
   }"
 >
-  <div class="container mb-5 text-center" *ngIf="route === '/'">
+  <div
+    class="container text-center overflow-hidden"
+    [ngClass]="{ 'h-0': route !== '/', 'mb-5': route === '/' }"
+  >
     <img src="assets/logo.svg" alt="JONO" class="logo-img" />
     <p class="h1 my-5">Coder, Designer, Technology Enthusiast</p>
   </div>
